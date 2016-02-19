@@ -100,12 +100,12 @@ public class GuaGuaKa extends View {
         mBitmap = Bitmap.createBitmap(width, height, Bitmap.Config.ARGB_8888);
         mCanvas = new Canvas(mBitmap);
 
-        setupOutPaint();
-        setupBackPaint();
+        setupOutPaint();//设置“橡皮擦”画笔的属性
+        setupBackPaint();//设置绘制“谢谢参与”的画笔属性
 //        mCanvas.drawColor(Color.parseColor("#c0c0c0"));//在控件区域绘制一个灰色的图层
         //画覆盖层的bitmap，是圆角矩形
         mCanvas.drawRoundRect(new RectF(0, 0, width, height), 30, 30, mOutterPaint);
-        mCanvas.drawBitmap(mOutterBitmap, null, new Rect(0, 0, width, height), null);
+        mCanvas.drawBitmap(mOutterBitmap, null, new Rect(0, 0, width, height), null);//画“谢谢参与”bitmap
     }
 
     /**
